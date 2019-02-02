@@ -27,37 +27,15 @@
 
 # ======================== CHANGE THESE VALUES ========================
 function stopServices {
-	echo -e "${purple}${bold}Stopping services before backup${NC}${normal}" | tee -a $DIR/backup.log
-    sudo service sendmail stop
-    sudo service cron stop
-    sudo service ssh stop
-    sudo pkill deluged
-    sudo pkill deluge-web
-    sudo service deluge-daemon stop
-    sudo ervice btsync stop
-    sudo service apache2 stop
-    sudo service samba stop
-    
-    #sudo service noip stop
-    #sudo service proftpd stop
-    #sudo service webmin stop
-    #sudo service xrdp stop
-    #sudo service ddclient stop
-    #sudo service apache2 stop
-    #sudo service samba stop
-    #sudo service avahi-daemon stop
-    #sudo service netatalk stop
+    echo -e "${purple}${bold}Stopping services before backup${NC}${normal}" | tee -a $DIR/backup.log
+    #sudo service cron stop
+    #sudo service ssh stop
 }
 
 function startServices {
-	echo -e "${purple}${bold}Starting the stopped services${NC}${normal}" | tee -a $DIR/backup.log
-    sudo ervice samba start
-    sudo service apache2 start
-    sudo service btsync start
-    sudo service deluge-daemon start
-    sudo service ssh start
-    sudo service cron start
-    sudo service sendmail start
+    echo -e "${purple}${bold}Starting the stopped services${NC}${normal}" | tee -a $DIR/backup.log
+    #sudo service ssh start
+    #sudo service cron start
 }
 
 
